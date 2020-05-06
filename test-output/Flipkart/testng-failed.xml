@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="-1" guice-stage="DEVELOPMENT" name="Failed suite [Flipkart]">
+  <parameter name="selenium.port" value="4444"/>
+  <parameter name="selenium.host" value="192.168.0.103"/>
+  <listeners>
+    <listener class-name="com.Flipkart.Utility.CustomReporter"/>
+    <listener class-name="com.Flipkart.Utility.CustomReporterBuildSummary"/>
+  </listeners>
+  <test name="Search Request ID(failed)">
+    <classes>
+      <class name="com.Flipkart.AddtoCart.AddtoCartIndex">
+        <methods>
+          <include name="AddToCart"/>
+          <include name="fetchSuiteConfiguration"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- com.Flipkart.AddtoCart.AddtoCartIndex -->
+    </classes>
+  </test> <!-- Search Request ID(failed) -->
+</suite> <!-- Failed suite [Flipkart] -->
