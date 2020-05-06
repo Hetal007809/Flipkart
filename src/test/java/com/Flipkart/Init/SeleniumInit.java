@@ -200,7 +200,7 @@ public class SeleniumInit {
 			e.printStackTrace();
 			// test.log(Status.FAIL, testResult.getThrowable());
 		}
-
+// Hetal Patel
 		addtoCartIndexPage = new AddtoCartIndexPage(driver);
 		addtoCartVerification = new AddtoCartVerification(driver);
 	}
