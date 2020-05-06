@@ -172,12 +172,12 @@ public class SeleniumInit {
 			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
 			capability.setCapability("disable-popup-blocking", true);
 			osName = capability.getPlatform().name();
-			capability = DesiredCapabilities.chrome();
+			//capability = DesiredCapabilities.chrome();
 			/*System.setProperty("webdriver.chrome.driver",
 					"E:\\chromedriver.exe");*/
 			capability.setBrowserName("chrome");
 			capability.setJavascriptEnabled(true);
-			osName = capability.getPlatform().name();
+			//osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
 			//driver = new RemoteWebDriver(remote_grid, capability);
 			driver= new ChromeDriver(capability);

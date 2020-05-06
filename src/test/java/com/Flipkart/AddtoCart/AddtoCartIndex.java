@@ -9,32 +9,32 @@ import com.Flipkart.Init.SeleniumInit;
 
 public class AddtoCartIndex extends SeleniumInit {
 
-	@Test
-	public void AddToCart() {
-		int numOfFailure = 0;
-		int step = 1;
-		String MenuName = "Electronics";
-		String MobileCompany = "Asus";
-		String ram ="6 GB";
-		String rating = "4★";
-		String Rating = "4";
-		String name= "Asus ROG (Black, 128 GB)" ;
-
-
-		logStep(step++, "Open Flipkart URL " + testUrl);
-		Common.pause(3);
-		logStep(step++, "Click on close button to close Popup");
-		addtoCartVerification = addtoCartIndexPage.ClickonCloseBtn();
-
-		Common.pause(3);
-		log("Verify Pop up is hide & user redirect to Home page.");
-		if (addtoCartVerification.VerifyPopup()) {
-			logStatus(1, "Pass");
-		} else {
-			logStatus(2, "Fail");
-			numOfFailure++;	
-		}
-		
+//	@Test
+//	public void AddToCart() {
+//		int numOfFailure = 0;
+//		int step = 1;
+//		String MenuName = "Electronics";
+//		String MobileCompany = "Asus";
+//		String ram ="6 GB";
+//		String rating = "4★";
+//		String Rating = "4";
+//		String name= "Asus ROG (Black, 128 GB)" ;
+//
+//
+//		logStep(step++, "Open Flipkart URL " + testUrl);
+//		Common.pause(3);
+//		logStep(step++, "Click on close button to close Popup");
+//		addtoCartVerification = addtoCartIndexPage.ClickonCloseBtn();
+//
+//		Common.pause(3);
+//		log("Verify Pop up is hide & user redirect to Home page.");
+//		if (addtoCartVerification.VerifyPopup()) {
+//			logStatus(1, "Pass");
+//		} else {
+//			logStatus(2, "Fail");
+//			numOfFailure++;	
+//		}
+//		
 //		Common.pause(2);
 //		logStep(step++, "Hover on " + MenuName + " to Open Submenu.");
 //		addtoCartVerification = addtoCartIndexPage.HoveronMenu(MenuName);
@@ -106,15 +106,15 @@ public class AddtoCartIndex extends SeleniumInit {
 //		} 
 //	}
 //
-//	@Test
-//	public void Search() {
-//		int numOfFailure = 0;
-//		int step = 1;
-//		
-//		logStep(step++, "Open Flipkart URL " + testUrl);
-//		Common.pause(3);
-//		logStep(step++, "Click on Search bar.");
-////		addtoCartVerification = addtoCartIndexPage.clickonSearchBar();
-//		
+	@Test
+	public void Search() {
+		int numOfFailure = 0;
+		int step = 1;
+		
+		logStep(step++, "Open Flipkart URL " + testUrl);
+		Common.pause(3);
+		logStep(step++, "Click on Search bar.");
+		addtoCartVerification = addtoCartIndexPage.clickonSearchBar();
+		
 	}
 }
