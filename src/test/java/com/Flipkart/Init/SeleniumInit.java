@@ -68,8 +68,8 @@ public class SeleniumInit {
 	@BeforeTest(alwaysRun = true)
 	public void fetchSuiteConfiguration(ITestContext testContext) throws IOException {
 
-		 //seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
-		 //seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
+		 seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
+		 seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 		 testUrl = TestData.getValueFromConfig("config.properties", "URL");
 		// System.out.println("Payer URL: "+PayertestURL);
 
@@ -82,7 +82,7 @@ public class SeleniumInit {
 		targetBrowser = TestData.getValueFromConfig("config.properties", "Browser");
 		browserName = targetBrowser;
 		currentTest = method.getName(); // get Name of current test.
-		//URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
 		String SCREENSHOT_FOLDER_NAME = "screenshots";
 		String TESTDATA_FOLDER_NAME = "test_data";
 		test_data_folder_path = new File(TESTDATA_FOLDER_NAME).getAbsolutePath();
@@ -179,8 +179,8 @@ public class SeleniumInit {
 			capability.setJavascriptEnabled(true);
 			//osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			//driver = new RemoteWebDriver(remote_grid, capability);
-			driver= new ChromeDriver(capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
+			//driver= new ChromeDriver(capability);
 			} 
 		        else if (targetBrowser.contains("safari")) {
 				capability = DesiredCapabilities.safari();
@@ -200,7 +200,6 @@ public class SeleniumInit {
 			e.printStackTrace();
 			// test.log(Status.FAIL, testResult.getThrowable());
 		}
-// Hetal Patel
 		addtoCartIndexPage = new AddtoCartIndexPage(driver);
 		addtoCartVerification = new AddtoCartVerification(driver);
 	}
