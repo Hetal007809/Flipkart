@@ -1,4 +1,25 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 30.142 s - in TestSuite
+Tests run: 2, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 12.017 s <<< FAILURE! - in TestSuite
+AddToCart(com.Flipkart.AddtoCart.AddtoCartIndex)  Time elapsed: 0.005 s  <<< FAILURE!
+java.lang.NullPointerException
+	at com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart(AddtoCartIndex.java:27)
+
+tearDown(com.Flipkart.AddtoCart.AddtoCartIndex)  Time elapsed: 0.334 s  <<< FAILURE!
+org.openqa.selenium.WebDriverException: 
+Session [null] not available and is not among the last 1000 terminated sessions.
+Active sessions are[ext. key 726291e84430c6ebb56fb31de578f772, ext. key cf03171c2c91c24ca60b76b4f4fb2a4f, ext. key 5dda3c3ca1562cb01c841c5d3868544f, ext. key 7dab3c560fa13f25d7015e0c445a46fc]
+Command duration or timeout: 36 milliseconds
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'PARTH-PC', ip: '192.168.0.103', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{capabilities={networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\PARTH\AppData\Local\Temp\scoped_dir8092_1528268032}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, proxy={}, goog:chromeOptions={debuggerAddress=localhost:53455}, webdriver.remote.sessionid=7dab3c560fa13f25d7015e0c445a46fc, acceptInsecureCerts=false, browserVersion=80.0.3987.163, browserName=chrome, platformName=windows, setWindowRect=true}, sessionId=7dab3c560fa13f25d7015e0c445a46fc, platform=ANY}]
+Session ID: null
+Caused by: org.openqa.selenium.WebDriverException: 
+Session [null] not available and is not among the last 1000 terminated sessions.
+Active sessions are[ext. key 726291e84430c6ebb56fb31de578f772, ext. key cf03171c2c91c24ca60b76b4f4fb2a4f, ext. key 5dda3c3ca1562cb01c841c5d3868544f, ext. key 7dab3c560fa13f25d7015e0c445a46fc]
+Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
+System info: host: 'PARTH-PC', ip: '192.168.0.103', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.8.0_151'
+Driver info: driver.version: unknown
+

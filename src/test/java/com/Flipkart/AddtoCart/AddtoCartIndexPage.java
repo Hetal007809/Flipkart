@@ -28,6 +28,7 @@ public class AddtoCartIndexPage extends AbstractPage {
 	WebElement ClosePopupBtn;
 	
 	public AddtoCartVerification ClickonCloseBtn() {
+		Common.clickableElement(ClosePopupBtn, driver);
 		ClosePopupBtn.click();
 		return new AddtoCartVerification(driver);
 	}

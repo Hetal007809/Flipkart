@@ -21,7 +21,7 @@ import java.util.Set;
 import java.util.SimpleTimeZone;
 import java.util.TimeZone;
 import org.apache.commons.io.FileUtils;
-import org.apache.commons.lang3.RandomStringUtils;
+import org.apache.commons.lang.RandomStringUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
@@ -792,7 +792,7 @@ public class Common {
 	
 	public static String generateRandomNumber(int length) {
 		String numNoRange = "";
-		// numNoRange = RandomStringUtils.randomNumeric(length);
+		 numNoRange = RandomStringUtils.randomNumeric(length);
 		do {
 			numNoRange = RandomStringUtils.randomNumeric(length);
 		} while (numNoRange.length() != length);

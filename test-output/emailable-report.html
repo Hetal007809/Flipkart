@@ -9,78 +9,40 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="7">Flipkart</th></tr>
-<tr><td><a href="#t0">Search Request ID</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">15,459</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Search Request ID</a></td><td class="num">0</td><td class="num">0</td><td class="num attn">1</td><td class="num">99,194</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Flipkart</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Search Request ID &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Flipkart.AddtoCart.AddtoCartIndex</td><td><a href="#m0">Search</a></td><td rowspan="1">1588828214903</td><td rowspan="1">3091</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Flipkart</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Search Request ID &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">com.Flipkart.AddtoCart.AddtoCartIndex</td><td><a href="#m0">AddToCart</a></td><td rowspan="1">1588873017476</td><td rowspan="1">80059</td></tr></tbody>
 </table>
-<h2>Search Request ID</h2><h3 id="m0">com.Flipkart.AddtoCart.AddtoCartIndex#Search</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Step-1 : Open Flipkart URL https://www.flipkart.com/</br><br/>Step-2 : Click on Search bar.</br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.WebDriverException: Session [null] not available and is not among the last 1000 terminated sessions.
-Active sessions are[ext. key 48ac2aad379b288cbdac984db3b5df80]
-Command duration or timeout: 64 milliseconds
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
+<h2>Search Request ID</h2><h3 id="m0">com.Flipkart.AddtoCart.AddtoCartIndex#AddToCart</h3><table class="result"><tr><th>Messages</th></tr><tr><td><div class="messages">Step-1 : Open Flipkart URL https://www.flipkart.com/</br><br/>Step-2 : Click on close button to close Popup</br><br/>Verify Pop up is hide & user redirect to Home page.</br><br/>Pass<font color=238E23>--<img src="passed.png"/></font></br><br/>Step-3 : Hover on Electronics to Open Submenu.</br><br/>Step-4 : Click on Asus</br><br/>Verify to selected Asus Mobile company Page title</br><br/>Pass<font color=238E23>--<img src="passed.png"/></font></br><br/>Step-5 : Select Assured from Filter</br><br/>Step-6 : Select RAM from Filter</br><br/>Step-7 : Select Rating From Filter</br><br/>Verify to check 6 GB RAM Mobile is display.</br><br/>6 GB Ram is select Properly.<font color=238E23>--<img src="passed.png"/></font></br><br/>Verify to check 4★ Rating Mobile is display.</br><br/>Pass<font color=238E23>--<img src="passed.png"/></font></br><br/>Step-8 : Find Maximum price from Mobile List & Click on it.</br><br/>Maximum Price : 69999Product Name : Asus ROG (Black, 128 GB)</br><br/>Step-9 : Click on Add to cart button.</br><br/>Verify Cart page after click on add to cart.</br><br/><br><Strong><font color=#FF0000>--Failed</font></strong></br><br/>Please look to the screenshot :- <a href='../test-output/screenshots/20200507230817570.png' target='_new'>20200507230817570.png</a></br></div></td></tr><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:99)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
+	at com.Flipkart.AddtoCart.AddtoCartVerification.VerifyAddtocartPage(AddtoCartVerification.java:67)
+	at com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart(AddtoCartIndex.java:97)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//div[@class=&apos;_1lBhq8&apos;]&quot;}
+  (Session info: chrome=80.0.3987.163)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;PARTH-PC&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
 Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities [{capabilities={networkConnectionEnabled=false, chrome={chromedriverVersion=80.0.3987.106 (f68069574609230cf9b635cd784cfb1bf81bb53a-refs/branch-heads/3987@{#882}), userDataDir=C:\Users\PARTH\AppData\Local\Temp\scoped_dir2872_546851934}, timeouts={implicit=0, pageLoad=300000, script=30000}, pageLoadStrategy=normal, unhandledPromptBehavior=ignore, strictFileInteractability=false, proxy={}, goog:chromeOptions={debuggerAddress=localhost:49281}, webdriver.remote.sessionid=48ac2aad379b288cbdac984db3b5df80, acceptInsecureCerts=false, browserVersion=80.0.3987.163, browserName=chrome, platformName=windows, setWindowRect=true}, sessionId=48ac2aad379b288cbdac984db3b5df80, platform=ANY}]
-Session ID: null
-*** Element info: {Using=xpath, value=.//input[@name=&apos;q&apos;]}
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\PARTH\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webdriver.remote.sessionid: 8787feafd779e59076c71ec68a5...}
+Session ID: 8787feafd779e59076c71ec68a557e20
+*** Element info: {Using=xpath, value=.//div[@class=&apos;_1lBhq8&apos;]}
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:41)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:157)
-	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:49)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:87)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy8.click(Unknown Source)
-	at com.Flipkart.AddtoCart.AddtoCartIndexPage.clickonSearchBar(AddtoCartIndexPage.java:119)
-	at com.Flipkart.AddtoCart.AddtoCartIndex.Search(AddtoCartIndex.java:117)
-Caused by: org.openqa.selenium.WebDriverException: Session [null] not available and is not among the last 1000 terminated sessions.
-Active sessions are[ext. key 48ac2aad379b288cbdac984db3b5df80]
-Build info: version: &apos;2.53.1&apos;, revision: &apos;a36b8b1cd5757287168e54b817830adce9b0158d&apos;, time: &apos;2016-06-30 19:26:09&apos;
-System info: host: &apos;PARTH-PC&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: driver.version: unknown
-	at org.openqa.grid.internal.ActiveTestSessions.getExistingSession(ActiveTestSessions.java:120)
-	at org.openqa.grid.internal.DefaultGridRegistry.getExistingSession(DefaultGridRegistry.java:387)
-	at org.openqa.grid.web.servlet.handler.RequestHandler.getSession(RequestHandler.java:241)
-	at org.openqa.grid.web.servlet.handler.RequestHandler.process(RequestHandler.java:123)
-	at org.openqa.grid.web.servlet.DriverServlet.process(DriverServlet.java:85)
-	at org.openqa.grid.web.servlet.DriverServlet.doPost(DriverServlet.java:69)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:707)
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:790)
-	at org.seleniumhq.jetty9.servlet.ServletHolder.handle(ServletHolder.java:865)
-	at org.seleniumhq.jetty9.servlet.ServletHandler.doHandle(ServletHandler.java:535)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle(ScopedHandler.java:146)
-	at org.seleniumhq.jetty9.security.SecurityHandler.handle(SecurityHandler.java:548)
-	at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:257)
-	at org.seleniumhq.jetty9.server.session.SessionHandler.doHandle(SessionHandler.java:1595)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextHandle(ScopedHandler.java:255)
-	at org.seleniumhq.jetty9.server.handler.ContextHandler.doHandle(ContextHandler.java:1340)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope(ScopedHandler.java:203)
-	at org.seleniumhq.jetty9.servlet.ServletHandler.doScope(ServletHandler.java:473)
-	at org.seleniumhq.jetty9.server.session.SessionHandler.doScope(SessionHandler.java:1564)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.nextScope(ScopedHandler.java:201)
-	at org.seleniumhq.jetty9.server.handler.ContextHandler.doScope(ContextHandler.java:1242)
-	at org.seleniumhq.jetty9.server.handler.ScopedHandler.handle(ScopedHandler.java:144)
-	at org.seleniumhq.jetty9.server.handler.HandlerWrapper.handle(HandlerWrapper.java:132)
-	at org.seleniumhq.jetty9.server.Server.handle(Server.java:503)
-	at org.seleniumhq.jetty9.server.HttpChannel.handle(HttpChannel.java:364)
-	at org.seleniumhq.jetty9.server.HttpConnection.onFillable(HttpConnection.java:260)
-	at org.seleniumhq.jetty9.io.AbstractConnection$ReadCallback.succeeded(AbstractConnection.java:305)
-	at org.seleniumhq.jetty9.io.FillInterest.fillable(FillInterest.java:103)
-	at org.seleniumhq.jetty9.io.ChannelEndPoint$2.run(ChannelEndPoint.java:118)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.runTask(EatWhatYouKill.java:333)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.doProduce(EatWhatYouKill.java:310)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.tryProduce(EatWhatYouKill.java:168)
-	at org.seleniumhq.jetty9.util.thread.strategy.EatWhatYouKill.run(EatWhatYouKill.java:126)
-	at org.seleniumhq.jetty9.util.thread.ReservedThreadExecutor$ReservedThread.run(ReservedThreadExecutor.java:366)
-	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:765)
-	at org.seleniumhq.jetty9.util.thread.QueuedThreadPool$2.run(QueuedThreadPool.java:683)
-	at java.lang.Thread.run(Thread.java:748)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
+	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:72)
+	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
+	... 29 more
+... Removed 28 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>

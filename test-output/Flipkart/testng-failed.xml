@@ -11,7 +11,7 @@
     <classes>
       <class name="com.Flipkart.AddtoCart.AddtoCartIndex">
         <methods>
-          <include name="Search"/>
+          <include name="AddToCart"/>
           <include name="fetchSuiteConfiguration"/>
           <include name="tearDown"/>
           <include name="setUp"/>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Flipkart">
-   <parameter name="selenium.host" value="192.168.0.103" /> <parameter name="selenium.port" 
+    <parameter name="selenium.host" value="192.168.0.103" /> <parameter name="selenium.port" 
 		value="4444" /> 
 	<listeners>
 	<listener class-name="com.Flipkart.Utility.CustomReporter" />
@@ -10,9 +10,9 @@
 	<test name="Search Request ID">
 		<classes>
 			<class name="com.Flipkart.AddtoCart.AddtoCartIndex">
-				<methods>
+				 <methods>
 					<include name="AddToCart"></include>
-					<include name="Search"></include>
+					<!-- <include name="Search"></include> -->
 				</methods> 
 			</class>
 		</classes>

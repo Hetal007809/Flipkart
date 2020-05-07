@@ -10,6 +10,7 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
+import org.openqa.selenium.Dimension;
 import org.openqa.selenium.Platform;
 import org.openqa.selenium.UnexpectedAlertBehaviour;
 import org.openqa.selenium.WebDriver;
@@ -61,6 +62,7 @@ public class SeleniumInit {
 	protected static String screenshot_folder_path = null;
 	public static String currentTest; // current running test
 	protected static Logger logger = Logger.getLogger("testing");
+	
 	protected WebDriver driver;
 	protected AddtoCartIndexPage addtoCartIndexPage;
 	protected AddtoCartVerification addtoCartVerification;
@@ -68,8 +70,8 @@ public class SeleniumInit {
 	@BeforeTest(alwaysRun = true)
 	public void fetchSuiteConfiguration(ITestContext testContext) throws IOException {
 
-		 //seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
-		 //seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
+		 seleniumHub = testContext.getCurrentXmlTest().getParameter("selenium.host");
+		 seleniumHubPort = testContext.getCurrentXmlTest().getParameter("selenium.port");
 		 testUrl = TestData.getValueFromConfig("config.properties", "URL");
 		// System.out.println("Payer URL: "+PayertestURL);
 
@@ -82,13 +84,13 @@ public class SeleniumInit {
 		targetBrowser = TestData.getValueFromConfig("config.properties", "Browser");
 		browserName = targetBrowser;
 		currentTest = method.getName(); // get Name of current test.
-		//URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
+		URL remote_grid = new URL("http://" + seleniumHub + ":" + seleniumHubPort + "/wd/hub");
 		String SCREENSHOT_FOLDER_NAME = "screenshots";
 		String TESTDATA_FOLDER_NAME = "test_data";
 		test_data_folder_path = new File(TESTDATA_FOLDER_NAME).getAbsolutePath();
 		screenshot_folder_path = new File(SCREENSHOT_FOLDER_NAME).getAbsolutePath();
 		try {
-			DesiredCapabilities capability = null;
+			DesiredCapabilities capability = null ;
 			if (targetBrowser == null || targetBrowser.contains("firefox")
 					|| targetBrowser.equalsIgnoreCase("firefox")) {
 				File driverpath = new File("Resource/geckodriver.exe");
@@ -159,14 +161,14 @@ public class SeleniumInit {
 				// driver = new RemoteWebDriver(remote_grid, capability);
 			}
 		if (targetBrowser.contains("chrome") || targetBrowser.equalsIgnoreCase("chrome")) {
-			capability = DesiredCapabilities.chrome();
+			capability = new DesiredCapabilities().chrome();
 			File driverpath = new File("Resource/chromedriver.exe");
 			String path1 = driverpath.getAbsolutePath();
 			System.setProperty("webdriver.chrome.driver",path1);
 			final ChromeOptions chromeOptions = new ChromeOptions();
 			//chromeOptions.setBinary("/usr/bin/chromium-browser");
 			//chromeOptions.addArguments("--headless");
-			capability.setBrowserName("chrome");
+			//capability.setBrowserName("chrome");
 			capability.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
 			capability.setJavascriptEnabled(true);
 			capability.setCapability(CapabilityType.UNEXPECTED_ALERT_BEHAVIOUR, UnexpectedAlertBehaviour.IGNORE);
@@ -175,12 +177,13 @@ public class SeleniumInit {
 			//capability = DesiredCapabilities.chrome();
 			/*System.setProperty("webdriver.chrome.driver",
 					"E:\\chromedriver.exe");*/
-			capability.setBrowserName("chrome");
-			capability.setJavascriptEnabled(true);
+			//capability.setBrowserName("chrome");
+			//capability.setJavascriptEnabled(true);
 			//osName = capability.getPlatform().name();
 			browserVersion = capability.getVersion();
-			//driver = new RemoteWebDriver(remote_grid, capability);
-			driver= new ChromeDriver(capability);
+			driver = new RemoteWebDriver(remote_grid, capability);
+			//driver= new ChromeDriver(capability);
+			
 			} 
 		        else if (targetBrowser.contains("safari")) {
 				capability = DesiredCapabilities.safari();
@@ -190,18 +193,22 @@ public class SeleniumInit {
 			}
 
 			suiteName = testContext.getSuite().getName();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+//			Dimension d = new Dimension(1382,744);
 			driver.manage().window().maximize();
+//			driver.manage().window().setSize(d); 
+			//driver.manage().window().maximize();
 			driver.get(testUrl);
 
 			suiteName = testContext.getSuite().getName();
+			addtoCartIndexPage = new AddtoCartIndexPage(driver);
+			addtoCartVerification = new AddtoCartVerification(driver);
 
 		} catch (Exception e) {
 			e.printStackTrace();
 			// test.log(Status.FAIL, testResult.getThrowable());
 		}
-		addtoCartIndexPage = new AddtoCartIndexPage(driver);
-		addtoCartVerification = new AddtoCartVerification(driver);
+		
 	}
 
 	@AfterMethod(alwaysRun = true)
@@ -215,7 +222,7 @@ public class SeleniumInit {
 			} else if (testResult.getStatus() == ITestResult.FAILURE) {
 				Result = "Fail";
 			} else {
-				Result = "Skeep";
+				Result = "SKIP";
 			}
 			// TestData.updatedBuildAnalysis("BuildAnalysis.xlsx", "BuildAnalysis",header
 			// ,testName, Result,col);
@@ -240,6 +247,7 @@ public class SeleniumInit {
 					// test.log(Status.FAIL,"Please look to the screenshot :- "+
 					// Common.makeScreenshot(driver, screenshotName));
 					// test.log(Status.FAIL, testResult.getThrowable());
+					 log("Please look to the screenshot :- "+ Common.makeScreenshot(driver, screenshotName));
 				}
 				if (testResult.getStatus() == ITestResult.SKIP) {
 					// test.log(Status.SKIP, testResult.getThrowable());
@@ -283,14 +291,16 @@ public class SeleniumInit {
 				System.out.println(e);
 			}
 		}
-		// driver.manage().deleteAllCookies();
-		try {
-			driver.close();
-			driver.quit();
-		} catch (Exception e) {
-			System.out.println(e);
-		}
+		 driver.manage().deleteAllCookies();
+//		try {
+//			driver.close();
+//			driver.quit();
+//		} catch (Exception e) {
+//			System.out.println(e);
+//		}
 
+		driver.close();
+		driver.quit();
 	}
 
 	/**
