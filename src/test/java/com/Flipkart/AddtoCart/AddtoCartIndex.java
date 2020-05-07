@@ -114,7 +114,7 @@ public class AddtoCartIndex extends SeleniumInit {
 		logStep(step++, "Open Flipkart URL " + testUrl);
 		Common.pause(3);
 		logStep(step++, "Click on Search bar.");
-		addtoCartVerification = addtoCartIndexPage.clickonSearchBar();
+//		addtoCartVerification = addtoCartIndexPage.clickonSearchBar();
 		
 	}
 }
