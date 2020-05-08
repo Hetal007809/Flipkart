@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>0/1/0</td>
 </tr><tr>
-<td>Started on:</td><td>Thu May 07 23:06:40 IST 2020</td>
+<td>Started on:</td><td>Thu May 07 23:48:33 IST 2020</td>
 </tr>
-<tr><td>Total time:</td><td>99 seconds (99194 ms)</td>
+<tr><td>Total time:</td><td>2 seconds (2718 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,6 +67,52 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED CONFIGURATIONS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td width="30%"><b>Exception</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td><b>Instance</b></td>
+</tr>
+<tr>
+<td title='com.Flipkart.AddtoCart.AddtoCartIndex.tearDown()'><b>tearDown</b><br>Test class: com.Flipkart.AddtoCart.AddtoCartIndex<br>Parameters: [TestResult name=AddToCart status=FAILURE method=AddtoCartIndex.AddToCart()[pri:0, instance:com.Flipkart.AddtoCart.AddtoCartIndex@617faa95] output=Step-1 : Open Flipkart URL https://www.flipkart.com/</br>], org.testng.TestRunner@229c6181</td>
+<td><div><pre>java.lang.NullPointerException
+	at com.Flipkart.Init.SeleniumInit.tearDown(SeleniumInit.java:294)
+... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1183231938", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1183231938'><pre>java.lang.NullPointerException
+	at com.Flipkart.Init.SeleniumInit.tearDown(SeleniumInit.java:294)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:124)
+	at org.testng.internal.MethodInvocationHelper.invokeMethodConsideringTimeout(MethodInvocationHelper.java:59)
+	at org.testng.internal.Invoker.invokeConfigurationMethod(Invoker.java:451)
+	at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:222)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:634)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:707)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:979)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:125)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:109)
+	at org.testng.TestRunner.privateRun(TestRunner.java:648)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:364)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1187)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1116)
+	at org.testng.TestNG.runSuites(TestNG.java:1028)
+	at org.testng.TestNG.run(TestNG.java:996)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
+</pre></div></td>
+<td>0</td>
+<td>com.Flipkart.AddtoCart.AddtoCartIndex@617faa95</td></tr>
+</table><p>
 <table width='100%' border='1' class='invocation-failed'>
 <tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -76,70 +122,19 @@ function toggleAllBoxes() {
 </tr>
 <tr>
 <td title='com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart()'><b>AddToCart</b><br>Test class: com.Flipkart.AddtoCart.AddtoCartIndex<br/>
-<a href="#Output-1473981203" onClick='toggleBox("Output-1473981203", this, "Show output", "Hide output");'>Show output</a>
+<a href="#Output-1498438472" onClick='toggleBox("Output-1498438472", this, "Show output", "Hide output");'>Show output</a>
 
-<a href="#Output-1473981203" onClick="toggleAllBoxes();">Show all outputs</a>
-<div class='log' id="Output-1473981203">
+<a href="#Output-1498438472" onClick="toggleAllBoxes();">Show all outputs</a>
+<div class='log' id="Output-1498438472">
 Step-1 : Open Flipkart URL https://www.flipkart.com/</br><br/>
 Step-2 : Click on close button to close Popup</br><br/>
-Verify Pop up is hide & user redirect to Home page.</br><br/>
-Pass<font color=238E23>--<img src="passed.png"/></font></br><br/>
-Step-3 : Hover on Electronics to Open Submenu.</br><br/>
-Step-4 : Click on Asus</br><br/>
-Verify to selected Asus Mobile company Page title</br><br/>
-Pass<font color=238E23>--<img src="passed.png"/></font></br><br/>
-Step-5 : Select Assured from Filter</br><br/>
-Step-6 : Select RAM from Filter</br><br/>
-Step-7 : Select Rating From Filter</br><br/>
-Verify to check 6 GB RAM Mobile is display.</br><br/>
-6 GB Ram is select Properly.<font color=238E23>--<img src="passed.png"/></font></br><br/>
-Verify to check 4? Rating Mobile is display.</br><br/>
-Pass<font color=238E23>--<img src="passed.png"/></font></br><br/>
-Step-8 : Find Maximum price from Mobile List & Click on it.</br><br/>
-Maximum Price : 69999Product Name : Asus ROG (Black, 128 GB)</br><br/>
-Step-9 : Click on Add to cart button.</br><br/>
-Verify Cart page after click on add to cart.</br><br/>
-<br><Strong><font color=#FF0000>--Failed</font></strong></br><br/>
-Please look to the screenshot :- <a href='../test-output/screenshots/20200507230817570.png' target='_new'>20200507230817570.png</a></br><br/>
 </div>
 </td>
-<td><div><pre>org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:99)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.Flipkart.AddtoCart.AddtoCartVerification.VerifyAddtocartPage(AddtoCartVerification.java:67)
-	at com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart(AddtoCartIndex.java:97)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//div[@class=&apos;_1lBhq8&apos;]&quot;}
-  (Session info: chrome=80.0.3987.163)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PARTH-PC&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\PARTH\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webdriver.remote.sessionid: 8787feafd779e59076c71ec68a5...}
-Session ID: 8787feafd779e59076c71ec68a557e20
-*** Element info: {Using=xpath, value=.//div[@class=&apos;_1lBhq8&apos;]}
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
-	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:72)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
-	... 29 more
-... Removed 28 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1473981203", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1473981203'><pre>org.openqa.selenium.NoSuchElementException: Timed out after 15 seconds. Unable to locate the element
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:99)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy10.isDisplayed(Unknown Source)
-	at com.Flipkart.AddtoCart.AddtoCartVerification.VerifyAddtocartPage(AddtoCartVerification.java:67)
-	at com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart(AddtoCartIndex.java:97)
+<td><div><pre>java.lang.NullPointerException
+	at com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart(AddtoCartIndex.java:27)
+... Removed 25 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1498438472", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1498438472'><pre>java.lang.NullPointerException
+	at com.Flipkart.AddtoCart.AddtoCartIndex.AddToCart(AddtoCartIndex.java:27)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -165,35 +160,8 @@ Session ID: 8787feafd779e59076c71ec68a557e20
 	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
 	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//div[@class=&apos;_1lBhq8&apos;]&quot;}
-  (Session info: chrome=80.0.3987.163)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;PARTH-PC&apos;, ip: &apos;192.168.0.103&apos;, os.name: &apos;Windows 7&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.1&apos;, java.version: &apos;1.8.0_151&apos;
-Driver info: org.openqa.selenium.remote.RemoteWebDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 80.0.3987.163, chrome: {chromedriverVersion: 80.0.3987.106 (f68069574609..., userDataDir: C:\Users\PARTH\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:57532}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: ignore, webdriver.remote.sessionid: 8787feafd779e59076c71ec68a5...}
-Session ID: 8787feafd779e59076c71ec68a557e20
-*** Element info: {Using=xpath, value=.//div[@class=&apos;_1lBhq8&apos;]}
-	at sun.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.access$001(AjaxElementLocator.java:39)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator$SlowLoadingElement.isLoaded(AjaxElementLocator.java:165)
-	at org.openqa.selenium.support.ui.SlowLoadableComponent.get(SlowLoadableComponent.java:72)
-	at org.openqa.selenium.support.pagefactory.AjaxElementLocator.findElement(AjaxElementLocator.java:95)
-	... 29 more
 </pre></div></td>
-<td>80</td>
+<td>0</td>
 <td>com.Flipkart.AddtoCart.AddtoCartIndex@617faa95</td></tr>
 </table><p>
 </body>
